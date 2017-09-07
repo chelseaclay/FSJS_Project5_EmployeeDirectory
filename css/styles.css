@@ -1,0 +1,225 @@
+* {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body{
+  padding: 1em 2em;
+  background-color: #f6f6f6;
+  display: flex;
+    display: -webkit-flex;
+  flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+  justify-content: space-between;
+    -webkit-justify-content: space-between;
+  align-items: center;
+    -webkit-align-items: center;
+}
+
+h1{
+  text-transform: uppercase;
+  font-size: 1.2em;
+  margin-bottom: 2em;
+  color: #545454;
+}
+
+#searchInput{
+  width: 25%;
+  transform: translateY(-0.75em);
+}
+
+#searchInput:focus {
+  outline: none;
+  border: 0.5px solid #778899;
+  -webkit-box-shadow: 1px 8px 6px -6px black;
+	   -moz-box-shadow: 1px 8px 6px -6px black;
+	        box-shadow: 1px 8px 6px -6px rgb(119, 136, 153);
+}
+
+#employeeGrid{
+  display: flex;
+    display: -webkit-flex;
+  flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+  justify-content: center;
+    -webkit-justify-content: center;
+  align-items: center;
+    -webkit-align-items: center;
+  flex-basis: 100%;
+    -webkit-flex-basis: 100%;
+}
+
+.employee {
+  background-color: white;
+  border: 1px solid gray;
+  border-radius: 0.5em;
+  margin: 0 2em 2em 0;
+  padding: 1em;
+  /*min-width: 300px;*/
+  width: 400px;
+  display: flex;
+    display: -webkit-flex;
+  flex-wrap: nowrap;
+    -webkit-flex-wrap: nowrap;
+  justify-content: center;
+    -webkit-justify-content: center;
+  align-items: center;
+    -webkit-align-items: center;
+}
+
+.employee:hover{
+  border-color: #778899;
+  -webkit-box-shadow: 1px 8px 6px -6px black;
+	   -moz-box-shadow: 1px 8px 6px -6px black;
+	        box-shadow: 1px 8px 6px -6px rgb(119, 136, 153);
+}
+
+.employee:hover .employee-name{
+  color: black;
+}
+
+.employee img {
+  background-color: powderblue;
+  border-radius: 50%;
+  margin-right: 2em;
+  width: 120px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.employee-info{
+  flex-basis: 1;
+}
+
+.employee-name{
+  font-weight: bold;
+  font-size: 1.2em;
+  padding-bottom: 0.25em;
+  text-transform: capitalize;
+  color: #545454;
+}
+
+.employee-email {
+  color: gray;
+  font-weight: lighter;
+  font-size: 0.9em;
+  padding-bottom: 0.5em;
+}
+
+.employee-city {
+  color: gray;
+  font-weight: lighter;
+  font-size: 0.9em;
+  text-transform: capitalize;
+}
+
+.overlay {
+  background: rgba(0, 0, 0, 0.85);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  /*display: none;*/
+  text-align: center;
+  z-index: 1000;
+}
+
+.overlay-content {
+  z-index: 1001;
+  background-color: white;
+  width: 20%;
+  min-width: 400px;
+  top: 1.5em;
+  margin: auto;
+  margin-top: 20%;
+  border-radius: 0.5em;
+  padding: 3em 0;
+  position: relative;
+}
+
+.overlay-close{
+  position: absolute;
+  top: 2.5%;
+  right: 4%;
+  cursor: pointer;
+  padding: 0.25em;
+  color: black;
+  outline: none;
+}
+
+.overlay-previous{
+  position: absolute;
+  top: 50%;
+  left: -10%;
+  cursor: pointer;
+  padding: 0.25em;
+  color: white;
+  font-size: 1.5em;
+  font-weight: lighter;
+  outline: none;
+}
+
+.overlay-next{
+  position: absolute;
+  top: 50%;
+  right: -10%;
+  cursor: pointer;
+  padding: 0.25em;
+  color: white;
+  font-size: 1.5em;
+  font-weight: lighter;
+  outline: none;
+}
+
+.overlay-content img{
+  border-radius: 50%;
+  width: 50%;
+  max-width: 175px;
+  padding-bottom: 0.75em;
+}
+
+.overlay-content p {
+  padding-bottom: 0.5em;
+}
+
+.overlay-content hr{
+  width: 75%;
+  margin: 0.5em auto 1em;
+}
+
+.overlay-name{
+  color: black;
+  font-size: 1.5em;
+  text-transform: capitalize;
+}
+
+.overlay-username{
+  color: #545454;
+  font-size: 1em;
+  text-transform: capitalize;
+}
+
+.overlay-email{
+  color: #545454;
+  font-size: 1em;
+}
+
+.overlay-cell{
+  color: #545454;
+  font-size: 1em;
+}
+
+.overlay-address{
+  color: #545454;
+  font-size: 1em;
+  text-transform: capitalize;
+}
+
+.overlay-birthday{
+  color: #545454;
+  font-size: 1em;
+}
